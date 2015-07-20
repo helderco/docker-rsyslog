@@ -53,3 +53,10 @@ Something like (not tested):
 ## Add configuration
 
 Just create your config files and in your Dockerfile, copy them to `/etc/rsyslog.d/`.
+
+
+## Read logs
+
+Assuming you're using `LEVEL1` priority, or added your own config to send logs to *stderr* or *stdout*, your logs can be seen with:
+
+    docker logs -f syslog

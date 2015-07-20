@@ -10,6 +10,6 @@ COPY rsyslog.conf /etc/
 COPY 20-user.conf /etc/rsyslog.d/
 
 VOLUME /var/run/rsyslog/dev
-EXPOSE 514
+EXPOSE 514/tcp 514/udp
 
 CMD ["rsyslogd", "-n"]
