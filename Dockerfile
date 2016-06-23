@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Helder Correia <me@heldercorreia.com>
+MAINTAINER Helder Correia <helder@siriux.org>
 
 RUN apt-get update && \
     apt-get install rsyslog --no-install-recommends -y && \
@@ -7,7 +7,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 COPY rsyslog.conf /etc/
-COPY 20-user.conf /etc/rsyslog.d/
+COPY rsyslog.d/ /etc/rsyslog.d/
 
 VOLUME /var/run/rsyslog/dev
 EXPOSE 514/tcp 514/udp
