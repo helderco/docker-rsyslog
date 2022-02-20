@@ -1,4 +1,4 @@
-# rsyslog
+# rsyslog (DEPRECATED)
 
 Docker image running rsyslog.
 
